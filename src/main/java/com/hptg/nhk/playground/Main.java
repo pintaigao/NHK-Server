@@ -2,10 +2,13 @@ package com.hptg.nhk.playground;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.hptg.nhk.Model.NewsList;
+import com.hptg.nhk.service.NewsListService;
+import com.hptg.nhk.service.NewsListServiceImpl;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -16,6 +19,9 @@ import java.util.Map;
 import static com.hptg.nhk.playground.GetNewsList.getURLContent;
 
 public class Main {
+
+    private static NewsListServiceImpl newsListService;
+
     public static void main(String[] args) {
 
         String strJson = getURLContent("https://www3.nhk.or.jp/news/easy/news-list.json?_=1537074548180") ;
@@ -58,10 +64,13 @@ public class Main {
         ObjectMapper mapper = new ObjectMapper();
         try {
             NewsList newsList = mapper.readValue(firstDayfirstNews.toString(),NewsList.class);
-            newsList.getNews_publication_time();
+            newsList.getNews_id();
+
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+
 
 
 

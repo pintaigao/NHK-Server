@@ -1,16 +1,43 @@
 package com.hptg.nhk.Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.net.URL;
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "newslist")
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class NewsList {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private int id;
+
+    @Column(name = "news_id")
     private String news_id;
+
+    @Column(name="title")
     private String title;
+
+    @Column(name = "news_image_url")
     private String news_web_image_uri;
+
+    @Column(name = "news_url")
     private String news_web_url;
+
+    @Column(name = "public_date")
     private String news_publication_time;
 
-    /* Useless Info */
+    /* Useless Info
     private String news_priority_number;
     private String news_prearranged_time;
     private String title_with_ruby;
@@ -27,9 +54,10 @@ public class NewsList {
     private String news_easy_image_uri;
     private String news_easy_movie_uri;
     private String news_easy_voice_uri;
-    private boolean news_display_flag;
+    private boolean news_display_flag;*/
 
     public String getNews_id() {
+        System.out.println(news_id);
         return news_id;
     }
 
@@ -71,7 +99,7 @@ public class NewsList {
         this.news_publication_time = publicTime[0];
     }
 
-    public String getNews_priority_number() {
+/*    public String getNews_priority_number() {
         return news_priority_number;
     }
 
@@ -205,5 +233,5 @@ public class NewsList {
 
     public void setNews_display_flag(boolean news_display_flag) {
         this.news_display_flag = news_display_flag;
-    }
+    }*/
 }
