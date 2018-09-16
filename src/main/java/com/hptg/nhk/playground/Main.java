@@ -1,14 +1,17 @@
 package com.hptg.nhk.playground;
 
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.hptg.nhk.Model.NewsList;
-import com.hptg.nhk.service.NewsListService;
 import com.hptg.nhk.service.NewsListServiceImpl;
 
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -20,7 +23,6 @@ import static com.hptg.nhk.playground.GetNewsList.getURLContent;
 
 public class Main {
 
-    private static NewsListServiceImpl newsListService;
 
     public static void main(String[] args) {
 
@@ -54,25 +56,33 @@ public class Main {
 
             firstDayfirstNews = (JSONObject) firstDayNews.get(0);
 
-
         } catch (JSONException e) {
             e.printStackTrace();
             System.err.println(e);
         }
 
-        /*Store them into the model*/
-        ObjectMapper mapper = new ObjectMapper();
-        try {
-            NewsList newsList = mapper.readValue(firstDayfirstNews.toString(),NewsList.class);
-            newsList.getNews_id();
+        /* Configure the Database */
+        SessionFactory factory = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(NewsList.class).buildSessionFactory();
 
+        /* Create session */
+        Session session = factory.getCurrentSession();
+
+        try{
+            System.out.println("Working on Database");
+            ObjectMapper mapper = new ObjectMapper();
+            NewsList newsList = mapper.readValue(firstDayfirstNews.toString(),NewsList.class);
+            session.beginTransaction();
+            session.save(newsList);
+            session.getTransaction().commit();
+            session.close();
+        } catch (JsonParseException e) {
+            e.printStackTrace();
+        } catch (JsonMappingException e) {
+            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+            factory.close();
         }
-
-
-
-
-
     }
 }

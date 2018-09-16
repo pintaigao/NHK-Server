@@ -54,7 +54,7 @@ public class AppConfiguration implements WebMvcConfigurer {
 
         // set hibernate properties
         Properties props = new Properties();
-        props.setProperty("hibernate.dialect","org.hibernate.dialect.PostgreSQLDialect" );
+        props.setProperty("hibernate.dialect","org.hibernate.dialect.PostgreSQL82Dialect" );
         props.setProperty("hibernate.show_sql", "true");
         return props;
     }
