@@ -23,6 +23,9 @@ public class NewsList {
     @Column(name="title")
     private String title;
 
+    @Column(name = "title_with_ruby")
+    private String title_with_ruby;
+
     @Column(name = "news_image_url")
     private String news_web_image_uri;
 
@@ -80,6 +83,14 @@ public class NewsList {
         this.title = title;
     }
 
+    public String getTitle_with_ruby() {
+        return title_with_ruby;
+    }
+
+    public void setTitle_with_ruby(String title_with_ruby) {
+        this.title_with_ruby = title_with_ruby;
+    }
+
     public String getNews_web_image_uri() {
         return news_web_image_uri;
     }
@@ -111,6 +122,7 @@ public class NewsList {
         return "NewsList{" +
                 "news_id='" + news_id + '\'' +
                 ", title='" + title + '\'' +
+                ", title_with_ruby='" + title_with_ruby + '\'' +
                 ", news_web_image_uri='" + news_web_image_uri + '\'' +
                 ", news_web_url='" + news_web_url + '\'' +
                 ", news_publication_time='" + news_publication_time + '\'' +
