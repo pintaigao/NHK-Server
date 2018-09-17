@@ -6,6 +6,7 @@ This is a backend server that return the news list which scrawl from NHK Easy Ne
 <div align=center>
     <img src = "/resources/nhk-logo.jpg" height = "150px" /> <img src = "/resources/spring-logo.png"  height = "150px"/>
 </div>
+
 ### Usage
 
 
