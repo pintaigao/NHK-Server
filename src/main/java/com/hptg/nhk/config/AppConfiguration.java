@@ -37,7 +37,7 @@ public class AppConfiguration implements WebMvcConfigurer {
             throw new RuntimeException(exc);
         }
         // set database connection props
-        myDataSource.setJdbcUrl("jdbc:postgresql://localhost:5432/NHK_News?useSSL = false");
+        myDataSource.setJdbcUrl("jdbc:postgresql://localhost:5432/NHK_News?useSSL=false");
         myDataSource.setUser("postgres");
         myDataSource.setPassword("Hptg19940215");
 

@@ -4,11 +4,13 @@ import com.hptg.nhk.Model.NewsList;
 import com.hptg.nhk.dao.NewsListDAO;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-public class NewsListServiceImpl implements NewsListService{
+@Service
+public class NewsListServiceImpl implements NewsListService {
 
     @Autowired
     private NewsListDAO newsListDAO;

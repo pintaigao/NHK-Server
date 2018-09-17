@@ -29,21 +29,21 @@ public class NewsList {
     @Column(name = "news_image_url")
     private String news_web_image_uri;
 
+    @Column(name = "public_date")
+    private String news_prearranged_time;
+
     @Column(name = "news_url")
     private String news_web_url;
-
-    @Column(name = "public_date")
-    private String news_publication_time;
 
     public NewsList() {
     }
 
-    public NewsList(String news_id, String title, String news_web_image_uri, String news_web_url, String news_publication_time) {
+    public NewsList(String news_id, String title, String news_web_image_uri, String news_web_url, String news_prearranged_time) {
         this.news_id = news_id;
         this.title = title;
         this.news_web_image_uri = news_web_image_uri;
         this.news_web_url = news_web_url;
-        this.news_publication_time = news_publication_time;
+        this.news_prearranged_time = news_prearranged_time;
     }
 
     /*Useless Info
@@ -107,14 +107,15 @@ public class NewsList {
         this.news_web_url = news_web_url;
     }
 
-    public String getNews_publication_time() {
-        System.out.println(news_publication_time);
-        return news_publication_time;
+
+    public String getNews_prearranged_time() {
+        System.out.println(news_prearranged_time);
+        return news_prearranged_time;
     }
 
-    public void setNews_publication_time(String news_publication_time) {
-        String[] publicTime = news_publication_time.split(" ");
-        this.news_publication_time = publicTime[0];
+    public void setNews_prearranged_time(String news_prearranged_time) {
+        String[] publicTime = news_prearranged_time.split(" ");
+        this.news_prearranged_time = publicTime[0];
     }
 
     @Override
@@ -125,7 +126,7 @@ public class NewsList {
                 ", title_with_ruby='" + title_with_ruby + '\'' +
                 ", news_web_image_uri='" + news_web_image_uri + '\'' +
                 ", news_web_url='" + news_web_url + '\'' +
-                ", news_publication_time='" + news_publication_time + '\'' +
+                ", news_publication_time='" + news_prearranged_time + '\'' +
                 '}';
     }
 }

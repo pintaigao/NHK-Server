@@ -13,17 +13,17 @@ import java.util.List;
 @Repository
 public class NewsListDAOImpl implements NewsListDAO{
 
-
     @Autowired
     private SessionFactory sessionFactory;
 
     @Override
     public List<NewsList> getNewsList() {
+
         // get the hibernate session
         Session currentSession = sessionFactory.getCurrentSession();
 
         // create a query ...
-        Query<NewsList> theQuery = currentSession.createQuery("from newslist", NewsList.class);
+        Query<NewsList> theQuery = currentSession.createQuery("from news_list order by public_date", NewsList.class);
 
         // execute query and gt result list
         List<NewsList> newsLists = theQuery.getResultList();
