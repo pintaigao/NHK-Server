@@ -3,7 +3,7 @@
 
 This is a backend server that return the news list which scrawl from NHK Easy News website. Implement with Spring Rest Framework
 
-<center>
-    <img src = "/resources/nhk-logo.jpg" />
-</center>
+<div align=center>
+    <img src = "/resources/nhk-logo.jpg" /> <img src = "/resources/spring-logo.png" />
+</div>
 
