@@ -14,7 +14,24 @@ This is a backend server that return the news list which scrawl from NHK Easy Ne
 ### Api
 
 * `/api/get_news` : return a list of the news_list
-* 
+
+
+
+### MySql Database 
+
+1. Create a `news_list` table:
+
+   ```mysql
+   CREATE TABLE news_list (
+     `news_id` char(25) PRIMARY KEY NOT NULL,
+     `title` TEXT NOT NULL,
+     `title_with_ruby` TEXT,
+     `news_img_url` TEXT,
+     `news_url` TEXT,
+     `pulic_date` TEXT
+   )
+   ```
+
 
 ### File Structure
 

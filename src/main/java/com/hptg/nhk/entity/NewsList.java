@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Newslist")
+@Table(name = "news_list")
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class NewsList {
 
