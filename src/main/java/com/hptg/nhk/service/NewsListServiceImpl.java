@@ -6,15 +6,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.hptg.nhk.dao.CustomerDAO;
+import com.hptg.nhk.dao.NewsListDAO;
 import com.hptg.nhk.entity.NewsList;
 
 @Service
-public class CustomerServiceImpl implements CustomerService {
+public class NewsListServiceImpl implements CustomerService {
 
 	// need to inject customer dao
 	@Autowired
-	private CustomerDAO customerDAO;
+	private NewsListDAO customerDAO;
 
 	@Override
 	@Transactional

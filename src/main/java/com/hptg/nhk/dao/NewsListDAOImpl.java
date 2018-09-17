@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 import com.hptg.nhk.entity.NewsList;
 
 @Repository
-public class CustomerDAOImpl implements CustomerDAO {
+public class NewsListDAOImpl implements NewsListDAO {
 
 	// need to inject the session factory
 	@Autowired

@@ -12,7 +12,7 @@ import com.hptg.nhk.service.CustomerService;
 
 @RestController
 @RequestMapping("/api")
-public class CustomerRestController {
+public class NewsListController {
 
 	// autowire the CustomerService
 	@Autowired

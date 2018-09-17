@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.hptg.nhk.entity.NewsList;
 
-public interface CustomerDAO {
+public interface NewsListDAO {
 
 	public List<NewsList> getNewsList();
 
