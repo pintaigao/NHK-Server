@@ -24,7 +24,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        String strJson = getURLContent("https://www3.nhk.or.jp/news/easy/news-list.json?");
+        String strJson = getURLContent("https://www3.nhk.or.jp/news/easy/news-list.json");
         strJson = strJson.trim().substring(2, strJson.length());
 
         /*Store all the news into map with (date:this day's all news)*/
