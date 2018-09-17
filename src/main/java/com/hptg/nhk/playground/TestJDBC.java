@@ -1,4 +1,4 @@
-/*
+package com.hptg.nhk.playground;/*
 package com.hptg.nhk.playground;
 
 import java.sql.Connection;
