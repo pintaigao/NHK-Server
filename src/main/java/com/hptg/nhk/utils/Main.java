@@ -1,4 +1,4 @@
-package com.hptg.nhk.playground;
+package com.hptg.nhk.utils;
 
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import static com.hptg.nhk.playground.GetNewsListJSON.getURLContent;
+import static com.hptg.nhk.utils.UrlHandler.getURLContent;
 
 public class Main {
 
@@ -25,6 +25,7 @@ public class Main {
     public static void main(String[] args) {
 
         String strJson = getURLContent("https://www3.nhk.or.jp/news/easy/news-list.json");
+
         strJson = strJson.trim().substring(2, strJson.length());
 
         /*Store all the news into map with (date:this day's all news)*/

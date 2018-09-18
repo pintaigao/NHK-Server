@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.hptg.nhk.entity.NewsList;
 
-public interface CustomerService {
+public interface NewsListService {
 
 	public List<NewsList> getNewsList();
 

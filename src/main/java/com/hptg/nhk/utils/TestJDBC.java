@@ -1,5 +1,5 @@
-package com.hptg.nhk.playground;/*
-package com.hptg.nhk.playground;
+package com.hptg.nhk.utils;/*
+package com.hptg.nhk.utils;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

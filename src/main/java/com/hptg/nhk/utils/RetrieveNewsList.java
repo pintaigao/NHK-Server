@@ -1,5 +1,5 @@
-package com.hptg.nhk.playground;/*
-package com.hptg.nhk.playground;
+package com.hptg.nhk.utils;/*
+package com.hptg.nhk.utils;
 
 import com.hptg.nhk.Model.NewsList;
 
