@@ -7,20 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76aef586-904a-4815-a321-2026280c0724" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hptg/nhk/utils/GetNewsDetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/NHK_Server_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/NHK_Server_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NHK_Server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/NHK_Server.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hptg/nhk/playground/GetNewsDetail.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hptg/nhk/playground/GetNewsListJSON.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hptg/nhk/utils/GetNewsListJSON.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hptg/nhk/playground/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hptg/nhk/utils/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hptg/nhk/playground/RetrieveNewsList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hptg/nhk/utils/RetrieveNewsList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hptg/nhk/playground/StringConvert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hptg/nhk/utils/StringConvert.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hptg/nhk/playground/TestJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hptg/nhk/utils/TestJDBC.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hptg/nhk/rest/NewsListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hptg/nhk/rest/NewsListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hptg/nhk/service/NewsListService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hptg/nhk/service/NewsListService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hptg/nhk/service/NewsListServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hptg/nhk/service/NewsListServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hptg/nhk/utils/GetNewsDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hptg/nhk/utils/GetNewsDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hptg/nhk/utils/GetNewsListJSON.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hptg/nhk/utils/UrlHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hptg/nhk/utils/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hptg/nhk/utils/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -61,7 +52,7 @@
         <counts>
           <entry key="GetNewsDetail" value="1" />
           <entry key="iml" value="2" />
-          <entry key="java" value="87" />
+          <entry key="java" value="88" />
           <entry key="jsp" value="4" />
           <entry key="properties" value="8" />
           <entry key="xml" value="20" />
@@ -70,7 +61,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IDEA_MODULE" value="2" />
-          <entry key="JAVA" value="87" />
+          <entry key="JAVA" value="88" />
           <entry key="JSP" value="4" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Properties" value="8" />
@@ -79,8 +70,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="5" />
-          <entry key="java" value="4509" />
+          <entry key="dummy" value="15" />
+          <entry key="java" value="4932" />
           <entry key="jsp" value="38" />
           <entry key="properties" value="22" />
           <entry key="xml" value="182" />
@@ -88,9 +79,9 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="4509" />
+          <entry key="JAVA" value="4932" />
           <entry key="JSP" value="38" />
-          <entry key="PLAIN_TEXT" value="5" />
+          <entry key="PLAIN_TEXT" value="15" />
           <entry key="Properties" value="22" />
           <entry key="XML" value="182" />
         </counts>
@@ -102,69 +93,48 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.8661916">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/hptg/nhk/utils/Main.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="185">
-                  <caret line="28" column="64" lean-forward="true" selection-start-line="28" selection-start-column="64" selection-end-line="28" selection-end-column="64" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/hptg/nhk/utils/GetNewsDetail.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="285">
-                  <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#636#637#0" expanded="true" />
-                    <element signature="e#667#668#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pom.xml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="580">
-                  <caret line="89" selection-start-line="89" selection-end-line="89" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/hptg/nhk/dao/NewsListDAOImpl.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="75">
-                  <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/hptg/nhk/utils/GetNewsListJSON.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="510">
-                  <caret line="38" column="12" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hptg/nhk/utils/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="185">
+              <caret line="28" column="64" lean-forward="true" selection-start-line="28" selection-start-column="64" selection-end-line="28" selection-end-column="64" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hptg/nhk/utils/GetNewsDetail.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="70" selection-start-line="16" selection-start-column="70" selection-end-line="16" selection-end-column="70" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#838#839#0" expanded="true" />
+                <element signature="e#868#869#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hptg/nhk/rest/NewsListController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="35" column="24" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#846#847#0" expanded="true" />
+                <element signature="e#889#890#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -196,7 +166,6 @@
         <option value="$PROJECT_DIR$/src/web/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/hptg/nhk/dao/NewsListDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hptg/nhk/dao/NewsListDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hptg/nhk/rest/NewsListController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hptg/nhk/service/NewsListServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hptg/nhk/entity/NewsList.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
@@ -204,7 +173,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/hptg/nhk/playground/GetNewsDetail.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hptg/nhk/playground/GetNewsListJSON.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hptg/nhk/playground/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hptg/nhk/utils/UrlHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hptg/nhk/utils/GetNewsDetail.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hptg/nhk/rest/NewsListController.java" />
       </list>
     </option>
   </component>
@@ -281,16 +252,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="nhk" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="NHK_SPRING" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NHK_SPRING" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="nhk" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="rest" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -304,7 +266,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537230872039" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537233458203" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Artifacts" />
@@ -337,7 +299,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.GetNewsDetail">
+  <component name="RunManager" selected="Tomcat Server.Tomcat">
     <configuration name="GetNewsDetail" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.hptg.nhk.utils.GetNewsDetail" />
       <module name="NHK_Server" />
@@ -478,12 +440,12 @@
       <workItem from="1537204754947" duration="18000" />
       <workItem from="1537204775754" duration="1010000" />
       <workItem from="1537206007730" duration="2947000" />
-      <workItem from="1537227530438" duration="2761000" />
+      <workItem from="1537227530438" duration="5184000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38023000" />
+    <option name="totallyTimeSpent" value="40446000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1680" height="956" extended-state="6" />
@@ -496,12 +458,12 @@
       <window_info id="UI Designer" order="4" />
       <window_info id="Web" order="5" side_tool="true" />
       <window_info id="Persistence" order="6" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="7" visible="true" weight="0.22832723" />
+      <window_info content_ui="combo" id="Project" order="7" visible="true" weight="0.22832723" />
       <window_info id="Structure" order="8" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Spring" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="3" weight="0.3287037" />
+      <window_info active="true" anchor="bottom" id="Messages" order="3" visible="true" weight="0.3287037" />
       <window_info anchor="bottom" id="Java Enterprise" order="4" />
       <window_info anchor="bottom" id="Database Changes" order="5" />
       <window_info anchor="bottom" id="Version Control" order="6" show_stripe_button="false" />
@@ -509,7 +471,7 @@
       <window_info anchor="bottom" id="Message" order="8" />
       <window_info anchor="bottom" id="Find" order="9" weight="0.3287037" />
       <window_info anchor="bottom" id="Run" order="10" weight="0.38310185" />
-      <window_info anchor="bottom" id="Debug" order="11" weight="0.39958593" />
+      <window_info anchor="bottom" id="Debug" order="11" weight="0.39930555" />
       <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="14" />
@@ -629,13 +591,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hptg/nhk/rest/NewsListController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hptg/nhk/dao/NewsListDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -650,13 +605,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="89" selection-start-line="89" selection-end-line="89" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hptg/nhk/service/NewsListService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -664,10 +612,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hptg/nhk/utils/GetNewsListJSON.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hptg/nhk/utils/UrlHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="38" column="12" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
+        <state relative-caret-position="240">
+          <caret line="20" column="45" lean-forward="true" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="89" selection-start-line="89" selection-end-line="89" />
         </state>
       </provider>
     </entry>
@@ -690,12 +645,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hptg/nhk/utils/GetNewsDetail.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
+        <state relative-caret-position="240">
+          <caret line="16" column="70" selection-start-line="16" selection-start-column="70" selection-end-line="16" selection-end-column="70" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#636#637#0" expanded="true" />
-            <element signature="e#667#668#0" expanded="true" />
+            <element signature="e#838#839#0" expanded="true" />
+            <element signature="e#868#869#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hptg/nhk/rest/NewsListController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="35" column="24" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#846#847#0" expanded="true" />
+            <element signature="e#889#890#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import static com.hptg.nhk.utils.GetNewsListJSON.getURLContent;
+import static com.hptg.nhk.utils.UrlHandler.getURLContent;
 
 public class Main {
 

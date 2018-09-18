@@ -7,7 +7,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 
-public class GetNewsListJSON {
+public class UrlHandler {
     public static String getURLContent(String urlStr){    //请求的url
         URL url = null;
 
