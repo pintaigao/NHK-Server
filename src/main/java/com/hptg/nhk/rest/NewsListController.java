@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.hptg.nhk.entity.NewsList;
-import com.hptg.nhk.service.CustomerService;
+import com.hptg.nhk.service.NewsListService;
 
 @RestController
 @RequestMapping("/api")
@@ -16,7 +16,7 @@ public class NewsListController {
 
 	// autowire the CustomerService
 	@Autowired
-	private CustomerService customerService;
+	private NewsListService customerService;
 	
 	// add mapping for GET /customers
 	@GetMapping("/get_news")

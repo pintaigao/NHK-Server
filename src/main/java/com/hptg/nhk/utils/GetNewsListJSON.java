@@ -1,4 +1,4 @@
-package com.hptg.nhk.playground;
+package com.hptg.nhk.utils;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -31,8 +31,9 @@ public class GetNewsListJSON {
             while ((str = in.readLine()) != null) {
                 sb.append(str);
             }
-        } catch (Exception ex) {
 
+        } catch (Exception ex) {
+            System.err.println(ex);
         } finally {
             try {
                 if (in != null) {
@@ -42,8 +43,6 @@ public class GetNewsListJSON {
 
             }
         }
-//        String result = sb;
-//        System.out.println(sb);
         return sb.toString();
     }
 

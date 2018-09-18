@@ -10,7 +10,7 @@ import com.hptg.nhk.dao.NewsListDAO;
 import com.hptg.nhk.entity.NewsList;
 
 @Service
-public class NewsListServiceImpl implements CustomerService {
+public class NewsListServiceImpl implements NewsListService {
 
 	// need to inject customer dao
 	@Autowired
