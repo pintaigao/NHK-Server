@@ -7,9 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76aef586-904a-4815-a321-2026280c0724" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/NHK_Server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/NHK_Server.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hptg/nhk/rest/NewsListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hptg/nhk/rest/NewsListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hptg/nhk/utils/GetNewsDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hptg/nhk/utils/GetNewsDetail.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -71,7 +69,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="15" />
-          <entry key="java" value="5408" />
+          <entry key="java" value="5409" />
           <entry key="jsp" value="38" />
           <entry key="properties" value="22" />
           <entry key="xml" value="182" />
@@ -79,7 +77,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="5408" />
+          <entry key="JAVA" value="5409" />
           <entry key="JSP" value="38" />
           <entry key="PLAIN_TEXT" value="15" />
           <entry key="Properties" value="22" />
@@ -123,8 +121,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/hptg/nhk/rest/NewsListController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+            <state relative-caret-position="191">
+              <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#938#939#0" expanded="true" />
@@ -275,7 +273,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537237014587" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537237146805" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Artifacts" />
@@ -449,12 +447,12 @@
       <workItem from="1537204754947" duration="18000" />
       <workItem from="1537204775754" duration="1010000" />
       <workItem from="1537206007730" duration="2947000" />
-      <workItem from="1537227530438" duration="7215000" />
+      <workItem from="1537227530438" duration="7347000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42477000" />
+    <option name="totallyTimeSpent" value="42609000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1680" height="956" extended-state="6" />
@@ -673,8 +671,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hptg/nhk/rest/NewsListController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+        <state relative-caret-position="191">
+          <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#938#939#0" expanded="true" />

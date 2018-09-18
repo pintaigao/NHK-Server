@@ -4,8 +4,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.json.JSONObject;
-import org.jsoup.nodes.Element;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -31,11 +29,7 @@ public class NewsListController {
         return customerService.getNewsList();
     }
 
-/*	@GetMapping("/news/{news_id}")
-	public JSONObject getNewsDetail(@PathVariable String news_id){
-		return GetNewsDetail.getNewsDetail(news_id);
-	}*/
-
+    
     @ResponseBody
     @GetMapping(value = "/news/{news_id}")
     public Map<String, String> getNewsDetail(@PathVariable String news_id) {
