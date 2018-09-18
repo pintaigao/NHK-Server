@@ -1,6 +1,8 @@
 package com.hptg.nhk.rest;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.json.JSONObject;
 import org.jsoup.nodes.Element;
@@ -8,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.hptg.nhk.entity.NewsList;
@@ -18,27 +21,31 @@ import com.hptg.nhk.utils.GetNewsDetail;
 @RequestMapping(value = "/api")
 public class NewsListController {
 
-	// autowire the CustomerService
-	@Autowired
-	private NewsListService customerService;
-	
-	// add mapping for GET /customers
-	@GetMapping("/news")
-	public List<NewsList> getNewsList(){
-		return customerService.getNewsList();
-	}
+    // autowire the CustomerService
+    @Autowired
+    private NewsListService customerService;
+
+    // add mapping for GET /customers
+    @GetMapping("/news")
+    public List<NewsList> getNewsList() {
+        return customerService.getNewsList();
+    }
 
 /*	@GetMapping("/news/{news_id}")
 	public JSONObject getNewsDetail(@PathVariable String news_id){
 		return GetNewsDetail.getNewsDetail(news_id);
 	}*/
 
-	@GetMapping(value = "/news/{news_id}",produces="text/html;charset=UTF-8")
-	public String getNewsDetail(@PathVariable String news_id){
-		return GetNewsDetail.getNewsDetail(news_id);
-	}
-
-
+    @ResponseBody
+    @GetMapping(value = "/news/{news_id}")
+    public Map<String, String> getNewsDetail(@PathVariable String news_id) {
+        String[] newsdetail = GetNewsDetail.getNewsDetail(news_id);
+        Map<String, String> map = new HashMap<>();
+        map.put("title", newsdetail[0]);
+        map.put("article",newsdetail[2]);
+        map.put("public_time",newsdetail[1]);
+        return map;
+    }
 
 
 }
