@@ -13,8 +13,8 @@ This is a backend server that return the news list which scrawl from NHK Easy Ne
 
 ### Api
 
-* `/api/get_news` : return a list of the news_list
-
+* `/api/news` : return a list of the news_list
+* `/api/news/:id` : return a news in detail
 
 
 ### MySql Database 
