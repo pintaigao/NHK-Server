@@ -1,11 +1,8 @@
 <html>
 <body>
 
-<h3>Spring CRM REST Demo</h3>
+<h3>Stay Still. You are on NHK NEWS SERVER. Created and maintained by Pintaigao He</h3>
 
 <hr>
-
-<a href="${pageContext.request.contextPath}/api/news">Get All Customers</a>
-
 </body>
 </html>

@@ -17,14 +17,13 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 import static com.hptg.nhk.utils.UrlHandler.getURLContent;
 
-public class Main {
-
-
+public class GetTopList {
     public static void main(String[] args) {
 
-        String strJson = getURLContent("https://www3.nhk.or.jp/news/easy/news-list.json");
+        String strJson = getURLContent("https://www3.nhk.or.jp/news/easy/top-list.json");
 
         strJson = strJson.trim().substring(2, strJson.length());
 

@@ -99,7 +99,6 @@ public class NewsList {
 
 
     public String getNews_prearranged_time() {
-        System.out.println(news_prearranged_time);
         return news_prearranged_time;
     }
 

@@ -23,7 +23,7 @@ public class NewsListDAOImpl implements NewsListDAO {
 		Session currentSession = sessionFactory.getCurrentSession();
 
 		// execute query and gt result list
-		Query<NewsList> theQuery = currentSession.createQuery("from NewsList", NewsList.class);
+		Query<NewsList> theQuery = currentSession.createQuery("from NewsList order by news_prearranged_time desc ", NewsList.class);
 
 		List<NewsList> newsLists = theQuery.getResultList();
 		System.out.println(newsLists);
