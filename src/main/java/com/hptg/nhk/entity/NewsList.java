@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.Table;
 
 @Entity
@@ -30,6 +31,13 @@ public class NewsList {
 
     @Column(name = "news_url")
     private String news_web_url;
+
+    @Lob
+    @Column(name = "news_img")
+    private byte[] news_img;
+
+
+
 
     public NewsList() {
     }
@@ -105,6 +113,14 @@ public class NewsList {
     public void setNews_prearranged_time(String news_prearranged_time) {
         String[] publicTime = news_prearranged_time.split(" ");
         this.news_prearranged_time = publicTime[0];
+    }
+
+    public byte[] getNews_img() {
+        return news_img;
+    }
+
+    public void setNews_img(byte[] news_img) {
+        this.news_img = news_img;
     }
 
     @Override
