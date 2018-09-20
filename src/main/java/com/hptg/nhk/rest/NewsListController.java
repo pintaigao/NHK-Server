@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.hptg.nhk.entity.NewsList;
 import com.hptg.nhk.service.NewsListService;
 import com.hptg.nhk.utils.GetNewsDetail;
+import com.hptg.nhk.utils.GetNewsList;
 
 @RestController
 @RequestMapping(value = "/api")
@@ -29,7 +30,8 @@ public class NewsListController {
         return customerService.getNewsList();
     }
 
-    
+
+    /* Get the news detail */
     @ResponseBody
     @GetMapping(value = "/news/{news_id}")
     public Map<String, List<Map<String, String>>> getNewsDetail(@PathVariable String news_id) {
@@ -45,7 +47,11 @@ public class NewsListController {
         return map;
     }
 
-
+    /* update the news */
+    @GetMapping(value = "/news/update_all_news")
+    public void updateAllNews(){
+        GetNewsList.main(null);
+    }
 }
 
 
