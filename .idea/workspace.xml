@@ -7,7 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76aef586-904a-4815-a321-2026280c0724" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hptg/nhk/rest/NewsListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hptg/nhk/rest/NewsListController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hptg/nhk/utils/GetNewsDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hptg/nhk/utils/GetNewsDetail.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -60,7 +60,7 @@
           <entry key="GetNewsDetail" value="1" />
           <entry key="class" value="19" />
           <entry key="iml" value="2" />
-          <entry key="java" value="97" />
+          <entry key="java" value="107" />
           <entry key="jsp" value="5" />
           <entry key="properties" value="8" />
           <entry key="xml" value="20" />
@@ -70,7 +70,7 @@
         <counts>
           <entry key="CLASS" value="19" />
           <entry key="IDEA_MODULE" value="2" />
-          <entry key="JAVA" value="97" />
+          <entry key="JAVA" value="107" />
           <entry key="JSP" value="5" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Properties" value="8" />
@@ -80,7 +80,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="31" />
-          <entry key="java" value="7880" />
+          <entry key="java" value="8410" />
           <entry key="jsp" value="142" />
           <entry key="properties" value="22" />
           <entry key="xml" value="182" />
@@ -88,7 +88,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="7880" />
+          <entry key="JAVA" value="8410" />
           <entry key="JSP" value="142" />
           <entry key="PLAIN_TEXT" value="31" />
           <entry key="Properties" value="22" />
@@ -102,138 +102,32 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hptg/nhk/rest/NewsListController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="35" column="46" lean-forward="true" selection-start-line="35" selection-start-column="46" selection-end-line="35" selection-end-column="46" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/hptg/nhk/utils/GetNewsDetail.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="38" column="49" lean-forward="true" selection-start-line="38" selection-start-column="49" selection-end-line="38" selection-end-column="49" />
+            <state relative-caret-position="467">
+              <caret line="136" column="27" selection-start-line="136" selection-start-column="27" selection-end-line="136" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4235#4236#0" expanded="true" />
-                <element signature="e#4283#4284#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/jsoup/jsoup/1.11.3/jsoup-1.11.3.jar!/org/jsoup/select/Elements.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="395" selection-start-line="395" selection-end-line="395" />
-              <folding>
-                <element signature="e#718#719#0" expanded="true" />
-                <element signature="e#749#750#0" expanded="true" />
-                <element signature="e#9226#9227#0" expanded="true" />
-                <element signature="e#11058#11059#0" expanded="true" />
-                <element signature="e#11125#11126#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/jsoup/jsoup/1.11.3/jsoup-1.11.3.jar!/org/jsoup/nodes/Element.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="593" selection-start-line="593" selection-end-line="593" />
-              <folding>
-                <element signature="e#3515#3516#0" expanded="true" />
-                <element signature="e#3560#3561#0" expanded="true" />
-                <element signature="e#3592#3593#0" expanded="true" />
-                <element signature="e#3633#3634#0" expanded="true" />
-                <element signature="e#4567#4568#0" expanded="true" />
-                <element signature="e#4614#4615#0" expanded="true" />
-                <element signature="e#5180#5181#0" expanded="true" />
-                <element signature="e#5241#5242#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/jsoup/jsoup/1.11.3/jsoup-1.11.3.jar!/org/jsoup/helper/StringUtil.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="139" selection-start-line="139" selection-end-line="139" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/jsoup/jsoup/1.11.3/jsoup-1.11.3.jar!/org/jsoup/nodes/TextNode.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="95" selection-start-line="95" selection-end-line="95" />
-              <folding>
-                <element signature="e#519#520#0" expanded="true" />
-                <element signature="e#549#550#0" expanded="true" />
-                <element signature="e#785#786#0" expanded="true" />
-                <element signature="e#824#825#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/jsoup/jsoup/1.11.3/jsoup-1.11.3.jar!/org/jsoup/nodes/LeafNode.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="90" selection-start-line="90" selection-end-line="90" />
-              <folding>
-                <element signature="e#420#421#0" expanded="true" />
-                <element signature="e#475#476#0" expanded="true" />
-                <element signature="e#969#970#0" expanded="true" />
-                <element signature="e#1018#1019#0" expanded="true" />
-                <element signature="e#2194#2195#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/jsoup/jsoup/1.11.3/jsoup-1.11.3.jar!/org/jsoup/helper/Validate.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/jsoup/jsoup/1.11.3/jsoup-1.11.3.jar!/org/jsoup/select/NodeTraversor.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="51" selection-start-line="51" selection-end-line="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/jsoup/jsoup/1.11.3/jsoup-1.11.3.jar!/org/jsoup/nodes/Node.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="343" selection-start-line="343" selection-end-line="343" />
-              <folding>
-                <element signature="e#3162#3163#0" expanded="true" />
-                <element signature="e#3225#3226#0" expanded="true" />
-                <element signature="e#3981#3982#0" expanded="true" />
-                <element signature="e#4019#4020#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/jsoup/jsoup/1.11.3/jsoup-1.11.3.jar!/org/jsoup/parser/Tag.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="96" selection-start-line="96" selection-end-line="96" />
-              <folding>
-                <element signature="e#2795#2796#0" expanded="true" />
-                <element signature="e#2830#2831#0" expanded="true" />
-                <element signature="e#4263#4264#0" expanded="true" />
+                <element signature="e#498#499#0" expanded="true" />
+                <element signature="e#532#533#0" expanded="true" />
+                <element signature="e#705#706#0" expanded="true" />
+                <element signature="e#733#734#0" expanded="true" />
+                <element signature="e#789#790#0" expanded="true" />
+                <element signature="e#822#823#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -277,13 +171,13 @@
         <option value="$PROJECT_DIR$/src/main/java/com/hptg/nhk/playground/GetNewsListJSON.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hptg/nhk/playground/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hptg/nhk/utils/UrlHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hptg/nhk/rest/NewsListController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/hptg/nhk/entity/NewsList.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hptg/nhk/utils/GetNewsList.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hptg/nhk/dao/NewsListDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hptg/nhk/utils/GetTopNews.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hptg/nhk/utils/GetTopList.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hptg/nhk/rest/NewsListController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hptg/nhk/utils/GetNewsDetail.java" />
       </list>
     </option>
@@ -428,7 +322,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537407755318" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537409512817" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Artifacts" />
@@ -461,7 +355,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.GetNewsDetail">
+  <component name="RunManager" selected="Tomcat Server.Tomcat">
     <configuration name="GetNewsDetail" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.hptg.nhk.utils.GetNewsDetail" />
       <module name="NHK_Server" />
@@ -612,7 +506,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61289000" />
+    <option name="totallyTimeSpent" value="62880000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1680" y="22" width="1919" height="1058" extended-state="6" />
@@ -625,19 +519,19 @@
       <window_info id="UI Designer" order="4" />
       <window_info id="Web" order="5" side_tool="true" />
       <window_info id="Persistence" order="6" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="7" visible="true" weight="0.11880661" />
+      <window_info content_ui="combo" id="Project" order="7" visible="true" weight="0.17794353" />
       <window_info id="Structure" order="8" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Spring" order="0" weight="0.32919255" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.32919255" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="3" weight="0.3287037" />
+      <window_info active="true" anchor="bottom" id="Messages" order="3" visible="true" weight="0.32815734" />
       <window_info anchor="bottom" id="Java Enterprise" order="4" />
       <window_info anchor="bottom" id="Database Changes" order="5" />
       <window_info anchor="bottom" id="Version Control" order="6" show_stripe_button="false" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32919255" />
       <window_info anchor="bottom" id="Message" order="8" />
       <window_info anchor="bottom" id="Find" order="9" weight="0.3287037" />
-      <window_info active="true" anchor="bottom" id="Run" order="10" visible="true" weight="0.3830228" />
+      <window_info anchor="bottom" id="Run" order="10" weight="0.3830228" />
       <window_info anchor="bottom" id="Debug" order="11" weight="0.5414079" />
       <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
@@ -699,29 +593,8 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/com/hptg/nhk/utils/GetNewsDetail.java</url>
-          <line>31</line>
-          <properties class="com.hptg.nhk.utils.GetNewsDetail" method="handleContentATage">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hptg/nhk/utils/ExtractNewsJSONObject.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hptg/nhk/utils/TestJDBC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/web/WEB-INF/web.xml" />
     <entry file="file://$PROJECT_DIR$/NHK_SPRING.iml" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hptg/nhk/config/MySpringMvcDispatcherServletInitializer.java">
@@ -808,34 +681,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hptg/nhk/entity/NewsList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="28" column="40" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hptg/nhk/utils/GetNewsList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="77" column="5" selection-start-line="24" selection-start-column="3" selection-end-line="77" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hptg/nhk/utils/RetrieveNewsList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hptg/nhk/utils/StringConvert.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hptg/nhk/utils/GetTopList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -847,16 +692,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hptg/nhk/rest/NewsListController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="24" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -896,69 +731,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/jsoup/jsoup/1.11.3/jsoup-1.11.3.jar!/org/jsoup/parser/Tag.class">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/jsoup/jsoup/1.11.3/jsoup-1.11.3.jar!/org/jsoup/select/Elements.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="96" selection-start-line="96" selection-end-line="96" />
+          <caret line="395" selection-start-line="395" selection-end-line="395" />
           <folding>
-            <element signature="e#2795#2796#0" expanded="true" />
-            <element signature="e#2830#2831#0" expanded="true" />
-            <element signature="e#4263#4264#0" expanded="true" />
+            <element signature="e#718#719#0" expanded="true" />
+            <element signature="e#749#750#0" expanded="true" />
+            <element signature="e#9226#9227#0" expanded="true" />
+            <element signature="e#11058#11059#0" expanded="true" />
+            <element signature="e#11125#11126#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/jsoup/jsoup/1.11.3/jsoup-1.11.3.jar!/org/jsoup/nodes/TextNode.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="95" selection-start-line="95" selection-end-line="95" />
-          <folding>
-            <element signature="e#519#520#0" expanded="true" />
-            <element signature="e#549#550#0" expanded="true" />
-            <element signature="e#785#786#0" expanded="true" />
-            <element signature="e#824#825#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/jsoup/jsoup/1.11.3/jsoup-1.11.3.jar!/org/jsoup/helper/StringUtil.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="139" selection-start-line="139" selection-end-line="139" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/jsoup/jsoup/1.11.3/jsoup-1.11.3.jar!/org/jsoup/nodes/LeafNode.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="90" selection-start-line="90" selection-end-line="90" />
-          <folding>
-            <element signature="e#420#421#0" expanded="true" />
-            <element signature="e#475#476#0" expanded="true" />
-            <element signature="e#969#970#0" expanded="true" />
-            <element signature="e#1018#1019#0" expanded="true" />
-            <element signature="e#2194#2195#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/jsoup/jsoup/1.11.3/jsoup-1.11.3.jar!/org/jsoup/nodes/Node.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="343" selection-start-line="343" selection-end-line="343" />
-          <folding>
-            <element signature="e#3162#3163#0" expanded="true" />
-            <element signature="e#3225#3226#0" expanded="true" />
-            <element signature="e#3981#3982#0" expanded="true" />
-            <element signature="e#4019#4020#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/jsoup/jsoup/1.11.3/jsoup-1.11.3.jar!/org/jsoup/select/NodeTraversor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
         </state>
       </provider>
     </entry>
@@ -979,28 +762,136 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/jsoup/jsoup/1.11.3/jsoup-1.11.3.jar!/org/jsoup/select/Elements.class">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/jsoup/jsoup/1.11.3/jsoup-1.11.3.jar!/org/jsoup/helper/StringUtil.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="395" selection-start-line="395" selection-end-line="395" />
+          <caret line="139" selection-start-line="139" selection-end-line="139" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/jsoup/jsoup/1.11.3/jsoup-1.11.3.jar!/org/jsoup/nodes/TextNode.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="95" selection-start-line="95" selection-end-line="95" />
           <folding>
-            <element signature="e#718#719#0" expanded="true" />
-            <element signature="e#749#750#0" expanded="true" />
-            <element signature="e#9226#9227#0" expanded="true" />
-            <element signature="e#11058#11059#0" expanded="true" />
-            <element signature="e#11125#11126#0" expanded="true" />
+            <element signature="e#519#520#0" expanded="true" />
+            <element signature="e#549#550#0" expanded="true" />
+            <element signature="e#785#786#0" expanded="true" />
+            <element signature="e#824#825#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/jsoup/jsoup/1.11.3/jsoup-1.11.3.jar!/org/jsoup/nodes/LeafNode.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="90" selection-start-line="90" selection-end-line="90" />
+          <folding>
+            <element signature="e#420#421#0" expanded="true" />
+            <element signature="e#475#476#0" expanded="true" />
+            <element signature="e#969#970#0" expanded="true" />
+            <element signature="e#1018#1019#0" expanded="true" />
+            <element signature="e#2194#2195#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/jsoup/jsoup/1.11.3/jsoup-1.11.3.jar!/org/jsoup/select/NodeTraversor.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/jsoup/jsoup/1.11.3/jsoup-1.11.3.jar!/org/jsoup/nodes/Node.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="343" selection-start-line="343" selection-end-line="343" />
+          <folding>
+            <element signature="e#3162#3163#0" expanded="true" />
+            <element signature="e#3225#3226#0" expanded="true" />
+            <element signature="e#3981#3982#0" expanded="true" />
+            <element signature="e#4019#4020#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/jsoup/jsoup/1.11.3/jsoup-1.11.3.jar!/org/jsoup/parser/Tag.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="96" selection-start-line="96" selection-end-line="96" />
+          <folding>
+            <element signature="e#2795#2796#0" expanded="true" />
+            <element signature="e#2830#2831#0" expanded="true" />
+            <element signature="e#4263#4264#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hptg/nhk/entity/NewsList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="28" column="40" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="40" />
+          <folding>
+            <element signature="e#2431#2432#0" expanded="true" />
+            <element signature="e#2475#2476#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hptg/nhk/utils/StringConvert.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hptg/nhk/utils/TestJDBC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hptg/nhk/utils/GetNewsList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1035">
+          <caret line="69" column="42" lean-forward="true" selection-start-line="69" selection-start-column="42" selection-end-line="69" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hptg/nhk/utils/RetrieveNewsList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hptg/nhk/rest/NewsListController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="35" column="46" lean-forward="true" selection-start-line="35" selection-start-column="46" selection-end-line="35" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hptg/nhk/utils/GetNewsDetail.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="38" column="49" lean-forward="true" selection-start-line="38" selection-start-column="49" selection-end-line="38" selection-end-column="49" />
+        <state relative-caret-position="467">
+          <caret line="136" column="27" selection-start-line="136" selection-start-column="27" selection-end-line="136" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4235#4236#0" expanded="true" />
-            <element signature="e#4283#4284#0" expanded="true" />
+            <element signature="e#498#499#0" expanded="true" />
+            <element signature="e#532#533#0" expanded="true" />
+            <element signature="e#705#706#0" expanded="true" />
+            <element signature="e#733#734#0" expanded="true" />
+            <element signature="e#789#790#0" expanded="true" />
+            <element signature="e#822#823#0" expanded="true" />
           </folding>
         </state>
       </provider>

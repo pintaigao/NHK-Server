@@ -7,6 +7,7 @@ import org.jsoup.nodes.Node;
 import org.jsoup.select.Elements;
 
 import java.util.LinkedHashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
@@ -14,22 +15,48 @@ import static com.hptg.nhk.utils.UrlHandler.getURLContent;
 
 public class GetNewsDetail {
 
-    static Map<String, String> wordRubyContainer = new LinkedHashMap<>();
-    static int count = 0;
+    private List<Map<String, String>> title = new LinkedList<>();
+    private List<Map<String, String>> publicDate = new LinkedList<>();
+    private List<Map<String, String>> articlelist = new LinkedList<>();
 
-    public static String[] getNewsDetail(String newsId) {
+
+    public List<Map<String, String>> getArticlelist() {
+        return articlelist;
+    }
+
+    public List<Map<String, String>> getTitle() {
+        return title;
+    }
+
+    public List<Map<String, String>> getPublicDate() {
+        return publicDate;
+    }
+
+    int count = 0;
+
+    public void getNewsDetail(String newsId) {
         String url = "https://www3.nhk.or.jp/news/easy/" + newsId + "/" + newsId + ".html";
         String strJson = getURLContent(url);
         Document doc = Jsoup.parse(strJson);
-        String[] str = new String[3];
-        str[0] = doc.body().getElementsByClass("article-main__title").toString().trim();
-        str[1] = doc.body().getElementById("js-article-date").text().trim().substring(1, 14);
-        str[2] = doc.body().getElementById("js-article-body").children().toString();
-        handleContentRuby(doc.body().getElementById("js-article-body").children().get(2), doc.body().getElementById("js-article-body").children().get(2).childNodes());
-        return str;
+
+        Map<String, String> titleRubyContainer = new LinkedHashMap<>();
+        handleContentRuby(doc.body().getElementsByClass("article-main__title").get(0),doc.body().getElementsByClass("article-main__title").get(0).childNodes(),titleRubyContainer);
+        title.add(titleRubyContainer);
+
+        Map<String, String> dateContainer = new LinkedHashMap<>();
+        dateContainer.put("publicDate", doc.body().getElementById("js-article-date").text().trim().substring(1, 14));
+        publicDate.add(dateContainer);
+
+        int childNum = doc.body().getElementById("js-article-body").children().size();
+        for (int i = 0; i < childNum; i++) {
+            Map<String, String> wordRubyContainer = new LinkedHashMap<>();
+            handleContentRuby(doc.body().getElementById("js-article-body").children().get(i), doc.body().getElementById("js-article-body").children().get(i).childNodes(), wordRubyContainer);
+            articlelist.add(wordRubyContainer);
+        }
+
     }
 
-    public static void handleContentATage(Element element) {
+    private void handleContentATage(Element element, Map<String, String> wordRubyContainer) {
         Elements childsInsideATag = element.children();
         if (childsInsideATag.get(0).nodeName() == "ruby") {
             String word = childsInsideATag.get(0).child(0).text();
@@ -58,7 +85,7 @@ public class GetNewsDetail {
     }
 
 
-    public static void handleContentRuby(Element firstpara, List<Node> childlist) {
+    private void handleContentRuby(Element firstpara, List<Node> childlist, Map<String, String> wordRubyContainer) {
 
         /* Get all the items from this Father tag*/
         List<Node> listNode = childlist;
@@ -78,23 +105,22 @@ public class GetNewsDetail {
                         count += 1;
                         firstparaContent = firstparaContent.size() == 1 ? firstparaContent : firstparaContent.next();
                     } else {
-                        handleContentRuby(currentElement, firstparaContent.first().childNodes());
+                        handleContentRuby(currentElement, firstparaContent.first().childNodes(), wordRubyContainer);
                         firstparaContent = firstparaContent.size() == 1 ? firstparaContent : firstparaContent.next();
                     }
                 } else if (n.nodeName() == "ruby") {
-                    System.out.println("go here");
                     if (firstparaContent.first().childNode(0).nodeName() != "span") {
                         String word = firstparaContent.first().childNode(0).toString();
                         String ruby0 = firstparaContent.first().children().text();
                         wordRubyContainer.put(ruby0, word);
                         firstparaContent = firstparaContent.size() == 1 ? firstparaContent : firstparaContent.next();
                     } else {
-                        handleContentRuby(currentElement, firstparaContent.first().childNodes());
+                        handleContentRuby(currentElement, firstparaContent.first().childNodes(), wordRubyContainer);
                         firstparaContent = firstparaContent.size() == 1 ? firstparaContent : firstparaContent.next();
                     }
 
                 } else if (n.nodeName() == "a") {
-                    handleContentATage(firstparaContent.first());
+                    handleContentATage(firstparaContent.first(), wordRubyContainer);
                     firstparaContent = firstparaContent.size() == 1 ? firstparaContent : firstparaContent.next();
                 }
             } else {
@@ -103,12 +129,12 @@ public class GetNewsDetail {
             }
 
         }
-
-        System.out.println(wordRubyContainer);
     }
 
     public static void main(String[] args) {
-        getNewsDetail("k10011579301000");
+        GetNewsDetail g = new GetNewsDetail();
+        g.getNewsDetail("k10011579301000");
+        System.out.println();
     }
 
 }

@@ -32,12 +32,16 @@ public class NewsListController {
     
     @ResponseBody
     @GetMapping(value = "/news/{news_id}")
-    public Map<String, String> getNewsDetail(@PathVariable String news_id) {
-        String[] newsdetail = GetNewsDetail.getNewsDetail(news_id);
-        Map<String, String> map = new HashMap<>();
-        map.put("title", newsdetail[0]);
-        map.put("article",newsdetail[2]);
-        map.put("public_time",newsdetail[1]);
+    public Map<String, List<Map<String, String>>> getNewsDetail(@PathVariable String news_id) {
+        GetNewsDetail g = new GetNewsDetail();
+        g.getNewsDetail(news_id);
+        List<Map<String, String>> title = g.getTitle();
+        List<Map<String, String>> date = g.getPublicDate();
+        List<Map<String, String>> artilelist = g.getArticlelist();
+        Map<String, List<Map<String, String>>> map = new HashMap<>();
+        map.put("title", title);
+        map.put("public_time",date);
+        map.put("article",artilelist);
         return map;
     }
 
