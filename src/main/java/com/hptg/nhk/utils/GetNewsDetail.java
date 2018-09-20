@@ -25,32 +25,40 @@ public class GetNewsDetail {
         str[0] = doc.body().getElementsByClass("article-main__title").toString().trim();
         str[1] = doc.body().getElementById("js-article-date").text().trim().substring(1, 14);
         str[2] = doc.body().getElementById("js-article-body").children().toString();
-        handleContentRuby(doc.body().getElementById("js-article-body").children().get(0),doc.body().getElementById("js-article-body").children().get(0).childNodes());
+        handleContentRuby(doc.body().getElementById("js-article-body").children().get(2), doc.body().getElementById("js-article-body").children().get(2).childNodes());
         return str;
     }
 
-    public static void handleContentATage(Element element){
+    public static void handleContentATage(Element element) {
         Elements childsInsideATag = element.children();
-
-        if(childsInsideATag.get(0).nodeName() == "ruby"){
+        if (childsInsideATag.get(0).nodeName() == "ruby") {
             String word = childsInsideATag.get(0).child(0).text();
             String ruby = childsInsideATag.get(0).child(1).text();
-            wordRubyContainer.put(ruby,word);
-        }else if(childsInsideATag.get(0).nodeName() == "span"){
-            String word = childsInsideATag.get(0).child(0).text();
-            wordRubyContainer.put("content" + count,word);
-            count += 1;
+            wordRubyContainer.put(ruby, word);
+        } else if (childsInsideATag.get(0).nodeName() == "span") {
+            Element el = childsInsideATag.get(0);
+
+
+            if (el.childNodeSize() != 0) {
+                wordRubyContainer.put("content" + count, childsInsideATag.get(0).text());
+                count += 1;
+            } else {
+                String word = childsInsideATag.get(0).child(0).text();
+                wordRubyContainer.put("content" + count, word);
+                count += 1;
+            }
         }
-        if(childsInsideATag.get(1).nodeName() == "span"){
+
+        if (childsInsideATag.size() > 1 && childsInsideATag.get(1).nodeName() == "span") {
             String word = childsInsideATag.get(1).text();
-            wordRubyContainer.put("content" + count,word);
+            wordRubyContainer.put("content" + count, word);
             count += 1;
         }
 
     }
 
 
-    public static void handleContentRuby(Element firstpara,List<Node> childlist) {
+    public static void handleContentRuby(Element firstpara, List<Node> childlist) {
 
         /* Get all the items from this Father tag*/
         List<Node> listNode = childlist;
@@ -59,19 +67,19 @@ public class GetNewsDetail {
         Elements firstparaContent = firstpara.children();
 
         for (Node n : listNode) {
-            String currnetNodeNameFromNode  = n.nodeName();
-            Element currentElement = firstparaContent.first() ;
-            String currentNodeNameFromELement = currentElement.nodeName() == null?"no name":currentElement.nodeName();
+            String currnetNodeNameFromNode = n.nodeName();
+            Element currentElement = firstparaContent.first();
+            String currentNodeNameFromELement = currentElement.nodeName() == null ? "no name" : currentElement.nodeName();
             if (currnetNodeNameFromNode == currentNodeNameFromELement) {
                 if (currnetNodeNameFromNode == "span") {
                     Elements InsideElement = currentElement.children();
                     if (InsideElement.isEmpty()) {
                         wordRubyContainer.put("content" + count, firstparaContent.first().text());
                         count += 1;
-                        firstparaContent = firstparaContent.size() == 1? firstparaContent :firstparaContent.next() ;
+                        firstparaContent = firstparaContent.size() == 1 ? firstparaContent : firstparaContent.next();
                     } else {
-                        handleContentRuby(currentElement,firstparaContent.first().childNodes());
-                        firstparaContent = firstparaContent.size() == 1? firstparaContent :firstparaContent.next() ;
+                        handleContentRuby(currentElement, firstparaContent.first().childNodes());
+                        firstparaContent = firstparaContent.size() == 1 ? firstparaContent : firstparaContent.next();
                     }
                 } else if (n.nodeName() == "ruby") {
                     System.out.println("go here");
@@ -79,15 +87,15 @@ public class GetNewsDetail {
                         String word = firstparaContent.first().childNode(0).toString();
                         String ruby0 = firstparaContent.first().children().text();
                         wordRubyContainer.put(ruby0, word);
-                        firstparaContent = firstparaContent.size() == 1? firstparaContent :firstparaContent.next() ;
+                        firstparaContent = firstparaContent.size() == 1 ? firstparaContent : firstparaContent.next();
                     } else {
-                        handleContentRuby(currentElement,firstparaContent.first().childNodes());
-                        firstparaContent = firstparaContent.size() == 1? firstparaContent :firstparaContent.next() ;
+                        handleContentRuby(currentElement, firstparaContent.first().childNodes());
+                        firstparaContent = firstparaContent.size() == 1 ? firstparaContent : firstparaContent.next();
                     }
 
-                } else if (n.nodeName() == "a"){
+                } else if (n.nodeName() == "a") {
                     handleContentATage(firstparaContent.first());
-                    firstparaContent = firstparaContent.size() == 1? firstparaContent :firstparaContent.next() ;
+                    firstparaContent = firstparaContent.size() == 1 ? firstparaContent : firstparaContent.next();
                 }
             } else {
                 wordRubyContainer.put("content" + count, n.toString());
