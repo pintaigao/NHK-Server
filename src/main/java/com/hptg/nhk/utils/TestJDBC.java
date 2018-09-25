@@ -1,4 +1,3 @@
-package com.hptg.nhk.utils;/*
 package com.hptg.nhk.utils;
 
 import java.sql.Connection;
@@ -8,8 +7,8 @@ import java.sql.SQLException;
 public class TestJDBC {
 
     public static void main(String[] args) {
-        String jdbcUrl = "jdbc:postgresql://localhost:5432/NHK_News?useSSL=false";
-        String user = "postgres";
+        String jdbcUrl = "jdbc:mysql://nhk-db.cfkajnkfgjxp.us-east-1.rds.amazonaws.com";
+        String user = "hptg1994";
         String pass = "Hptg19940215";
         Connection myConn;
         try {
@@ -23,4 +22,3 @@ public class TestJDBC {
     }
 
 }
-*/

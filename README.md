@@ -46,4 +46,27 @@ packages/
 	
 ```
 
-> Note: On the NewsListDAOImpl, on `geNewsList()` 's HQL `from NewsList`, NewsList is the classname that in the Entity instead of Table Name in MYSQL !!!
+> Note: 
+>
+> 1. On the NewsListDAOImpl, on `geNewsList()` 's HQL `from NewsList`, NewsList is the classname that in the Entity instead of Table Name in MYSQL !!!
+>
+> 2. Deploying onto AWS, if the error goes like "Incorrect string value:\xF0\x90\x8D..." that means the collation of columns of table is not utf-8, ( it probably is 'latin' ), using `SHOW FULL FIELDS FROM news_list ` to check that, and here is my solution:
+>
+>    ```
+>    ALTER table `news_list` DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_unicode_ci; 
+>    
+>    ALTER TABLE `news_list` MODIFY news_id char(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+>    
+>    ALTER TABLE `news_list` MODIFY title text CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+>    
+>    ALTER TABLE `news_list` MODIFY title_with_ruby text CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+>    
+>    ALTER TABLE `news_list` MODIFY news_image_url text CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+>    
+>    ALTER TABLE `news_list` MODIFY news_url text CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+>    
+>    ALTER TABLE `news_list` MODIFY public_date text CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+>    ```
+>
+>    Need to think about that when creating the table !!!
+
