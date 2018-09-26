@@ -51,6 +51,7 @@ public class GetNewsDetail {
         for (int i = 0; i < childNum; i++) {
             Map<String, String> wordRubyContainer = new LinkedHashMap<>();
             handleContentRuby(doc.body().getElementById("js-article-body").children().get(i), doc.body().getElementById("js-article-body").children().get(i).childNodes(), wordRubyContainer);
+            System.out.println(wordRubyContainer);
             articlelist.add(wordRubyContainer);
         }
 
@@ -133,7 +134,7 @@ public class GetNewsDetail {
 
     public static void main(String[] args) {
         GetNewsDetail g = new GetNewsDetail();
-        g.getNewsDetail("k10011579301000");
+        g.getNewsDetail("k10011638751000");
         System.out.println();
     }
 
