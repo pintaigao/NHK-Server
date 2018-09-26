@@ -24,6 +24,12 @@ public class NewsListServiceImpl implements NewsListService {
 
 	@Override
 	@Transactional
+	public List<NewsList> getNewsListWithSpecificDay(String today,String yesterday) {
+		return customerDAO.getNewsListWithSpecificDay(today,yesterday);
+	}
+
+	@Override
+	@Transactional
 	public void updateNews(List<NewsList> newsList) {
 		customerDAO.updateNews(newsList);
 	}

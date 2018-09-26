@@ -1,20 +1,18 @@
 # NHK EASY NEWS Backend Server
 ### Introduction
 
-This is a backend server that return the news list which scrawl from NHK Easy News website. Implement with Spring Rest Framework
+This is a backend server that return the news list which scrawl from NHK Easy News website. Implement with Spring Rest Framework and deploy on AWS.
 
 <div align=center>
     <img src = "/resources/nhk-logo.jpg" height = "150px" /> <img src = "/resources/spring-logo.png"  height = "150px"/>
 </div>
 
-### Usage
-
-
-
 ### Api
 
 * `/api/news` : return a list of the news_list
-* `/api/news/:id` : return a news in detail
+* `/api/daily_update_news` : feed database with the latest news
+* `/api/news/:id` : return a specific news with id = `:id`
+* **Don't Recommand to Use !!! **`/api/update_all_news` : feed database with all news if database being truncated
 
 
 ### MySql Database 

@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -15,12 +16,19 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.hptg.nhk.entity.NewsList;
 import com.hptg.nhk.service.NewsListService;
+import com.hptg.nhk.utils.GetDate;
 import com.hptg.nhk.utils.GetNewsDetail;
 import com.hptg.nhk.utils.GetNewsList;
 
 @RestController
 @RequestMapping(value = "/api")
 public class NewsListController {
+
+    /* Global Property of Date */
+    String today = GetDate.getToday();
+
+    /* Global Property of Yesterday */
+    String yesterday = GetDate.getYesterday();
 
     // autowire the CustomerService
     @Autowired
@@ -49,10 +57,17 @@ public class NewsListController {
         return map;
     }
 
-    /* update the news */
+    /* update all the news */
     @GetMapping(value = "/update_all_news")
     public void updateAllNews(){
         List<NewsList> newsLists = GetNewsList.getNewsList();
+        newsListService.updateNews(newsLists);
+    }
+
+    @GetMapping(value = "/daily_update_news")
+    public void dailyUpdateNews(){
+        List<NewsList> existingList = newsListService.getNewsListWithSpecificDay(today,yesterday);
+        List<NewsList> newsLists = GetNewsList.updateNewsList(today,yesterday,existingList);
         newsListService.updateNews(newsLists);
     }
 }

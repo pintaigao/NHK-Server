@@ -65,7 +65,6 @@ public class NewsList {
     */
 
     public String getNews_id() {
-        System.out.println(news_id);
         return news_id;
     }
 

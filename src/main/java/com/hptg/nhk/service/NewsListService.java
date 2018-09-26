@@ -8,6 +8,8 @@ public interface NewsListService {
 
 	public List<NewsList> getNewsList();
 
+	public List<NewsList> getNewsListWithSpecificDay(String today,String yesterday);
+
 	public void updateNews(List<NewsList> newsList);
 
 	public NewsList getNews(int theId);

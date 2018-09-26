@@ -26,9 +26,21 @@ public class NewsListDAOImpl implements NewsListDAO {
 		Query<NewsList> theQuery = currentSession.createQuery("from NewsList order by news_prearranged_time desc ", NewsList.class);
 
 		List<NewsList> newsLists = theQuery.getResultList();
-		System.out.println(newsLists);
 		// return the results
 		return newsLists;
+	}
+
+	@Override
+	public List<NewsList> getNewsListWithSpecificDay(String today,String yesterday){
+		// get the hibernate session
+		Session currentSession = sessionFactory.getCurrentSession();
+
+		// execute query and gt result list
+		String query = "from NewsList where news_prearranged_time = :date1 or news_prearranged_time=:date2";
+		Query<NewsList> theQuery = currentSession.createQuery(query, NewsList.class).setParameter("date1",today).setParameter("date2",yesterday);
+		List<NewsList> SpecificNewsLists = theQuery.getResultList();
+		// return the results
+		return SpecificNewsLists;
 	}
 
 	@Override
