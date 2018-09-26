@@ -13,12 +13,12 @@ import java.net.URL;
 public class GetNewsImage {
 
     public static void main(String[] args) {
-        String url = "https://www3.nhk.or.jp/news/html/20180920/K10011636841_1809201233_1809201237_01_03.jpg";
+        String url = "https://www3.nhk.or.jp/news/html/20180924/../20180924/K10011642191_1809241533_1809241617_01_02.jpg";
         byte[] btImg = getImageFromNetByUrl(url);
         if(null != btImg && btImg.length > 0){
             System.out.println("读取到：" + btImg.length + "字节");
-            String fileName = "Image.jpg";
-            writeImageToDisk(btImg,fileName);
+            /*String fileName = "Image.jpg";
+            writeImageToDisk(btImg,fileName);*/
         }else {
             System.out.println("没有从该链接获取到内容");
         }
@@ -32,12 +32,12 @@ public class GetNewsImage {
 
     public static void writeImageToDisk(byte[] img,String fileName){
         try {
-            File file = new File("/Users/hptg/Documents/Projects/Spring/NHK_SPRING/resources"+fileName);
+            File file = new File("/resources/webImage/"+fileName);
             FileOutputStream fops = new FileOutputStream(file);
             fops.write(img);
             fops.flush();
             fops.close();
-            System.out.println("图片已经写入到Resource");
+            System.out.println("图片已经写入到Resource/webImage");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -61,13 +61,15 @@ public class GetNewsImage {
             return btImg;
 
         } catch (MalformedURLException e) {
-            e.printStackTrace();
+            System.out.println("No Image Found from MalformedURLException:" + strUrl);
+            return null;
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("No Image Found from IOException:" + strUrl);
+            return null;
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("No Image Found from Exception:"  + strUrl);
+            return null;
         }
-        return null;
 
     }
 

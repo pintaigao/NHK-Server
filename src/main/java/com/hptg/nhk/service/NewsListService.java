@@ -8,7 +8,7 @@ public interface NewsListService {
 
 	public List<NewsList> getNewsList();
 
-	public void addNews(NewsList newsList);
+	public void updateNews(List<NewsList> newsList);
 
 	public NewsList getNews(int theId);
 	

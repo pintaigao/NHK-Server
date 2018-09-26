@@ -24,8 +24,8 @@ public class NewsListServiceImpl implements NewsListService {
 
 	@Override
 	@Transactional
-	public void addNews(NewsList newsList) {
-		customerDAO.addNews(newsList);
+	public void updateNews(List<NewsList> newsList) {
+		customerDAO.updateNews(newsList);
 	}
 
 	@Override

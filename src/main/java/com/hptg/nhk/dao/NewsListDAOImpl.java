@@ -32,11 +32,13 @@ public class NewsListDAOImpl implements NewsListDAO {
 	}
 
 	@Override
-	public void addNews(NewsList news) {
+	public void updateNews(List<NewsList> newsLists) {
 		// get the hibernate session
 		Session currentSession = sessionFactory.getCurrentSession();
-		// save/update the customer
-		currentSession.saveOrUpdate(news);
+		for(NewsList news : newsLists){
+			// save/update the news
+			currentSession.saveOrUpdate(news);
+		}
 	}
 
 	@Override

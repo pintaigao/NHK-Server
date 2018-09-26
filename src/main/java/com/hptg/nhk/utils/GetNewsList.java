@@ -22,8 +22,7 @@ import static com.hptg.nhk.utils.UrlHandler.getURLContent;
 public class GetNewsList {
 
 
-    public static void main(String[] args) {
-
+    public static List<NewsList> getNewsList(){
         String strJson = getURLContent("https://www3.nhk.or.jp/news/easy/news-list.json");
 
         strJson = strJson.trim().substring(2, strJson.length());
@@ -36,14 +35,15 @@ public class GetNewsList {
 
         String[] newsDateArr;
 
-        // Initiate specific day's news list
-        List<JSONObject> specificDayNews = new ArrayList();
+        /* News List List<NewsList>*/
+        List<NewsList> newsLists = new ArrayList<>();
 
-        /*Configure the Database*/
+
+//        Configure the Database
 
         SessionFactory factory = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(NewsList.class).buildSessionFactory();
 
-        /*Create session*/
+//        Create session
 
         Session session = factory.getCurrentSession();
 
@@ -56,9 +56,11 @@ public class GetNewsList {
                 JSONArray jsonArr = (JSONArray) jsonObject.get(date);
                 for (Object oj : jsonArr) {
                     ObjectMapper mapper = new ObjectMapper();
-                    NewsList newsList = mapper.readValue(oj.toString(), NewsList.class);
-                    newsList.getNews_prearranged_time();
-                    session.save(newsList);
+                    NewsList news = mapper.readValue(oj.toString(), NewsList.class);
+                    byte[] newImg = GetNewsImage.getImageFromNetByUrl(news.getNews_web_image_uri());
+                    news.setNews_img(newImg);
+                    newsLists.add(news);
+                    session.save(news);
                 }
             }
             session.getTransaction().commit();
@@ -71,9 +73,13 @@ public class GetNewsList {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
-        } finally {
+        }finally {
             factory.close();
         }
+        return newsLists;
+    }
 
+    public static void main(String[] args) {
+        GetNewsList.getNewsList();
     }
 }

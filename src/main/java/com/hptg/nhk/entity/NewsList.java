@@ -32,9 +32,9 @@ public class NewsList {
     @Column(name = "news_url")
     private String news_web_url;
 
-//    @Lob
-//    @Column(name = "news_img")
-//    private byte[] news_img;
+    @Lob
+    @Column(name = "news_photo")
+    private byte[] news_img;
 
 
 
@@ -115,13 +115,13 @@ public class NewsList {
         this.news_prearranged_time = publicTime[0];
     }
 
-    /*public byte[] getNews_img() {
+    public byte[] getNews_img() {
         return news_img;
     }
 
     public void setNews_img(byte[] news_img) {
         this.news_img = news_img;
-    }*/
+    }
 
     @Override
     public String toString() {

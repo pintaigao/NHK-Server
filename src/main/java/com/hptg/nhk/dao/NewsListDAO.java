@@ -8,7 +8,7 @@ public interface NewsListDAO {
 
 	public List<NewsList> getNewsList();
 
-	public void addNews(NewsList news);
+	public void updateNews(List<NewsList> newsLists);
 
 	public NewsList getNews(int theId);
 	
