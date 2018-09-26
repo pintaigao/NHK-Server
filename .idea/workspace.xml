@@ -7,16 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76aef586-904a-4815-a321-2026280c0724" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/NHK_Server_war.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/NHK_Server_war.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hptg/nhk/dao/NewsListDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hptg/nhk/dao/NewsListDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hptg/nhk/dao/NewsListDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hptg/nhk/dao/NewsListDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hptg/nhk/entity/NewsList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hptg/nhk/entity/NewsList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hptg/nhk/rest/NewsListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hptg/nhk/rest/NewsListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hptg/nhk/service/NewsListService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hptg/nhk/service/NewsListService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hptg/nhk/service/NewsListServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hptg/nhk/service/NewsListServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hptg/nhk/utils/GetNewsImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hptg/nhk/utils/GetNewsImage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hptg/nhk/utils/GetNewsList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hptg/nhk/utils/GetNewsList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/persistence-mysql.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/persistence-mysql.properties" afterDir="false" />
     </list>
@@ -54,16 +45,16 @@
     <session id="-877282309">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="18" />
+          <entry key="project.closed" value="19" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="4" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.open.time.6" value="5" />
+          <entry key="project.open.time.6" value="6" />
           <entry key="project.open.time.7" value="2" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="17" />
+          <entry key="project.opened" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -75,8 +66,8 @@
           <entry key="java" value="144" />
           <entry key="jpg" value="2" />
           <entry key="jsp" value="6" />
-          <entry key="properties" value="12" />
-          <entry key="xml" value="25" />
+          <entry key="properties" value="13" />
+          <entry key="xml" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -88,8 +79,8 @@
           <entry key="JAVA" value="144" />
           <entry key="JSP" value="6" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Properties" value="12" />
-          <entry key="XML" value="25" />
+          <entry key="Properties" value="13" />
+          <entry key="XML" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -123,7 +114,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/hptg/nhk/rest/NewsListController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="478">
+                <state relative-caret-position="555">
                   <caret line="55" column="46" selection-start-line="55" selection-start-column="46" selection-end-line="55" selection-end-column="46" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -135,8 +126,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/hptg/nhk/entity/NewsList.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="307">
-                  <caret line="28" column="33" lean-forward="true" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
+                <state relative-caret-position="330">
+                  <caret line="28" column="33" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
                   <folding>
                     <element signature="e#2140#2141#0" expanded="true" />
                     <element signature="e#2181#2182#0" expanded="true" />
@@ -145,11 +136,20 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/hptg/nhk/utils/GetNewsImage.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-15">
-                  <caret line="35" column="22" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
+                <state relative-caret-position="480">
+                  <caret line="66" column="76" lean-forward="true" selection-start-line="66" selection-start-column="76" selection-end-line="66" selection-end-column="76" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="255">
+                  <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
                 </state>
               </provider>
             </entry>
@@ -161,8 +161,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/hptg/nhk/utils/GetNewsList.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="495">
-                  <caret line="56" column="43" lean-forward="true" selection-start-line="56" selection-start-column="43" selection-end-line="56" selection-end-column="43" />
+                <state relative-caret-position="570">
+                  <caret line="61" column="40" selection-start-line="61" selection-start-column="40" selection-end-line="61" selection-end-column="40" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -256,7 +256,7 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1884" />
+    <option name="x" value="1805" />
     <option name="y" value="23" />
     <option name="width" value="1923" />
     <option name="height" value="1129" />
@@ -270,6 +270,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -335,7 +336,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -563,6 +563,7 @@
       <workItem from="1537923742281" duration="5595000" />
       <workItem from="1537930305940" duration="2635000" />
       <workItem from="1537934361071" duration="3653000" />
+      <workItem from="1537942514274" duration="154000" />
     </task>
     <servers />
   </component>
@@ -572,10 +573,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85288000" />
+    <option name="totallyTimeSpent" value="85442000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1884" y="23" width="1923" height="1129" extended-state="0" />
+    <frame x="1805" y="23" width="1923" height="1129" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="Image Layers" order="1" />
@@ -584,7 +586,7 @@
       <window_info id="UI Designer" order="4" />
       <window_info id="Web" order="5" side_tool="true" />
       <window_info id="Persistence" order="6" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="7" visible="true" weight="0.25199363" />
+      <window_info active="true" content_ui="combo" id="Project" order="7" visible="true" weight="0.25465178" />
       <window_info id="Structure" order="8" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Spring" order="0" weight="0.32919255" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.3284974" />
@@ -863,24 +865,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/persistence-mysql.properties">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hptg/nhk/rest/NewsListController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="32" lean-forward="true" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
+        <state relative-caret-position="555">
+          <caret line="55" column="46" selection-start-line="55" selection-start-column="46" selection-end-line="55" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hptg/nhk/entity/NewsList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="28" column="33" lean-forward="true" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
+        <state relative-caret-position="330">
+          <caret line="28" column="33" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
           <folding>
             <element signature="e#2140#2141#0" expanded="true" />
             <element signature="e#2181#2182#0" expanded="true" />
@@ -888,10 +886,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hptg/nhk/rest/NewsListController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hptg/nhk/utils/GetNewsList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="55" column="46" selection-start-line="55" selection-start-column="46" selection-end-line="55" selection-end-column="46" />
+        <state relative-caret-position="570">
+          <caret line="61" column="40" selection-start-line="61" selection-start-column="40" selection-end-line="61" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -900,18 +898,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hptg/nhk/utils/GetNewsImage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15">
-          <caret line="35" column="22" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
+        <state relative-caret-position="480">
+          <caret line="66" column="76" lean-forward="true" selection-start-line="66" selection-start-column="76" selection-end-line="66" selection-end-column="76" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hptg/nhk/utils/GetNewsList.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/persistence-mysql.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="56" column="43" lean-forward="true" selection-start-line="56" selection-start-column="43" selection-end-line="56" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="270">
+          <caret line="18" column="30" lean-forward="true" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
         </state>
       </provider>
     </entry>
