@@ -3,11 +3,6 @@
     <output-path>$PROJECT_DIR$/target</output-path>
     <root id="archive" name="spring-crm-rest.war">
       <element id="artifact" artifact-name="NHK_Server:war exploded" />
-      <element id="directory" name="WEB-INF">
-        <element id="directory" name="lib">
-          <element id="library" level="module" name="external libs" module-name="NHK_Server" />
-        </element>
-      </element>
     </root>
   </artifact>
 </component>

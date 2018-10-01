@@ -84,6 +84,7 @@ public class GetNewsList {
         try {
             JSONObject jsonObject = new JSONObject(strJson);
             JSONArray jsonArrToday = jsonObject.getJSONArray(today);
+            System.out.println(jsonArrToday);
             for (Object oj : jsonArrToday) {
                 boolean flag = true;
                 ObjectMapper mapper = new ObjectMapper();

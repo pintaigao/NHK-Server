@@ -9,6 +9,12 @@ public class GetDate {
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
         Date date = new Date();
         return formatter.format(date);
+
+        /*SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+        Calendar cal = Calendar.getInstance();
+        cal.add(Calendar.DATE, -1);
+        Date yes = cal.getTime();
+        return formatter.format(yes);*/
     }
 
     public static String getYesterday(){

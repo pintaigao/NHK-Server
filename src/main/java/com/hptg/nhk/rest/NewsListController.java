@@ -57,12 +57,12 @@ public class NewsListController {
         return map;
     }
 
-    /* update all the news */
+    /* update all the news *//*
     @GetMapping(value = "/update_all_news")
     public void updateAllNews(){
         List<NewsList> newsLists = GetNewsList.getNewsList();
         newsListService.updateNews(newsLists);
-    }
+    }*/
 
     @GetMapping(value = "/daily_update_news")
     public void dailyUpdateNews(){

@@ -60,7 +60,8 @@ public class DemoAppConfig implements WebMvcConfigurer {
 		myDataSource.setInitialPoolSize(getIntProperty("connection.pool.initialPoolSize"));
 		myDataSource.setMinPoolSize(getIntProperty("connection.pool.minPoolSize"));
 		myDataSource.setMaxPoolSize(getIntProperty("connection.pool.maxPoolSize"));		
-		myDataSource.setMaxIdleTime(getIntProperty("connection.pool.maxIdleTime"));
+//		myDataSource.setMaxIdleTime(getIntProperty("connection.pool.maxIdleTime"));
+		myDataSource.setMaxIdleTimeExcessConnections(getIntProperty("connection.pool.maxIdleTimeExcessConnections"));
 
 		return myDataSource;
 	}
