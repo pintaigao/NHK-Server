@@ -57,6 +57,7 @@ public class GetNewsList {
                 for (Object oj : jsonArr) {
                     ObjectMapper mapper = new ObjectMapper();
                     NewsList news = mapper.readValue(oj.toString(), NewsList.class);
+                    /* Get News Image */
                     byte[] newImg = GetNewsImage.getImageFromNetByUrl(news.getNews_web_image_uri());
                     news.setNews_img(newImg);
                     newsLists.add(news);
@@ -106,7 +107,6 @@ public class GetNewsList {
 
         } catch (JSONException | IOException e) {
             System.out.println("JSON Object Not Found");
-            return newsLists;
         }
 
 

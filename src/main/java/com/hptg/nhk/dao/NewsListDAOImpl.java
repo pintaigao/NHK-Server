@@ -37,7 +37,10 @@ public class NewsListDAOImpl implements NewsListDAO {
 
 		// execute query and gt result list
 		String query = "from NewsList where news_prearranged_time = :date1 or news_prearranged_time=:date2";
+		System.out.println(today);
+		System.out.println(yesterday);
 		Query<NewsList> theQuery = currentSession.createQuery(query, NewsList.class).setParameter("date1",today).setParameter("date2",yesterday);
+
 		List<NewsList> SpecificNewsLists = theQuery.getResultList();
 		// return the results
 		return SpecificNewsLists;

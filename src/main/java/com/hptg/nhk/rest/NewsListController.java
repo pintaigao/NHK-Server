@@ -24,11 +24,6 @@ import com.hptg.nhk.utils.GetNewsList;
 @RequestMapping(value = "/api")
 public class NewsListController {
 
-    /* Global Property of Date */
-    String today = GetDate.getToday();
-
-    /* Global Property of Yesterday */
-    String yesterday = GetDate.getYesterday();
 
     // autowire the CustomerService
     @Autowired
@@ -65,10 +60,16 @@ public class NewsListController {
     }*/
 
     @GetMapping(value = "/daily_update_news")
-    public void dailyUpdateNews(){
+    public boolean dailyUpdateNews(){
+        /* Global Property of Date */
+        String today = GetDate.getToday();
+
+        /* Global Property of Yesterday */
+        String yesterday = GetDate.getYesterday();
         List<NewsList> existingList = newsListService.getNewsListWithSpecificDay(today,yesterday);
         List<NewsList> newsLists = GetNewsList.updateNewsList(today,yesterday,existingList);
         newsListService.updateNews(newsLists);
+        return true;
     }
 }
 

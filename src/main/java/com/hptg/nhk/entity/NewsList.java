@@ -36,33 +36,10 @@ public class NewsList {
     @Column(name = "news_photo")
     private byte[] news_img;
 
-
-
-
     public NewsList() {
     }
 
 
-
-    /*Useless Info
-    private String news_priority_number;
-    private String news_prearranged_time;
-    private String title_with_ruby;
-    private boolean news_file_ver;
-    private String news_creation_time;
-    private String news_preview_time;
-    private boolean news_publication_status;
-    private boolean has_news_web_image;
-    private boolean has_news_web_movie;
-    private boolean has_news_easy_image;
-    private boolean has_news_easy_movie;
-    private boolean has_news_easy_voice;
-    private String news_web_movie_uri;
-    private String news_easy_image_uri;
-    private String news_easy_movie_uri;
-    private String news_easy_voice_uri;
-    private boolean news_display_flag;
-    */
 
     public String getNews_id() {
         return news_id;
@@ -89,6 +66,13 @@ public class NewsList {
     }
 
     public String getNews_web_image_uri() {
+        String url_clone = new String(news_web_image_uri);
+        String checking = url_clone.substring(0,5);
+        if(checking != "https"){
+            String[] urlarr = url_clone.split(".");
+            String prefixurl = "https://www3.nhk.or.jp/news/easy/" + urlarr[0] + "/" + url_clone;
+            return prefixurl;
+        }
         return news_web_image_uri;
     }
 
