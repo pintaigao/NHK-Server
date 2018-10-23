@@ -66,10 +66,14 @@ public class NewsList {
     }
 
     public String getNews_web_image_uri() {
+        if(news_web_image_uri.equals("")){
+            return news_web_image_uri;
+        }
         String url_clone = new String(news_web_image_uri);
         String checking = url_clone.substring(0,5);
-        if(checking != "https"){
+        if(!checking.equals("https")){
             String[] urlarr = url_clone.split(".");
+            System.out.println(url_clone);
             String prefixurl = "https://www3.nhk.or.jp/news/easy/" + urlarr[0] + "/" + url_clone;
             return prefixurl;
         }

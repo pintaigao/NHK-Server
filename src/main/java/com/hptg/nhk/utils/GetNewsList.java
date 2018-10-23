@@ -141,6 +141,6 @@ public class GetNewsList {
 
     /* Main for testing */
     public static void main(String[] args) {
-
+        GetNewsList.getNewsList();
     }
 }
