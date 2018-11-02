@@ -67,4 +67,7 @@ packages/
 >    ```
 >
 >    Need to think about that when creating the table !!!
+>
+> 3. When injecting data into databse, seeing all the data become question mark, reference: https://blog.csdn.net/qq_36381640/article/details/79185358,https://blog.csdn.net/violet_echo_0908/article/details/51498829,
+and ALTER TABLE Table CONVERT TO CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 
