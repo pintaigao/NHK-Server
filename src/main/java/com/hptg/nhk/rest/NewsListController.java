@@ -63,11 +63,11 @@ public class NewsListController {
     public boolean dailyUpdateNews(){
         /* Global Property of Date */
         String today = GetDate.getToday();
-
         /* Global Property of Yesterday */
         String yesterday = GetDate.getYesterday();
         List<NewsList> existingList = newsListService.getNewsListWithSpecificDay(today,yesterday);
         List<NewsList> newsLists = GetNewsList.updateNewsList(today,yesterday,existingList);
+        System.out.println(newsLists.get(1).getTitle());
         newsListService.updateNews(newsLists);
         return true;
     }
