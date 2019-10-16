@@ -64,6 +64,10 @@ public class NewsListDAOImpl implements NewsListDAO {
 		return news;
 	}
 
+
+
+
+
 }
 
 

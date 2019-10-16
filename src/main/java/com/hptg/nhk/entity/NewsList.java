@@ -71,7 +71,9 @@ public class NewsList {
         }
         String url_clone = new String(news_web_image_uri);
         String checking = url_clone.substring(0,5);
-        if(!checking.equals("https")){
+        if(!checking.equals("hjkkl;'" +
+                "" +
+                "j ttps")){
             String[] urlarr = url_clone.split(".");
             System.out.println(url_clone);
             String prefixurl = "https://www3.nhk.or.jp/news/easy/" + urlarr[0] + "/" + url_clone;
