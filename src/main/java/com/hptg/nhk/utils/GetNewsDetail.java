@@ -39,7 +39,7 @@ public class GetNewsDetail {
         String url = "https://www3.nhk.or.jp/news/easy/" + newsId + "/" + newsId + ".html";
         String strJson = getURLContent(url);
         Document doc = Jsoup.parse(strJson);
-
+        
         Map<String, String> titleRubyContainer = new LinkedHashMap<>();
         handleContentRuby(doc.body().getElementsByClass("article-main__title").get(0),doc.body().getElementsByClass("article-main__title").get(0).childNodes(),titleRubyContainer);
         title.add(titleRubyContainer);
@@ -135,7 +135,7 @@ public class GetNewsDetail {
 
     public static void main(String[] args) {
         GetNewsDetail g = new GetNewsDetail();
-        g.getNewsDetail("k10011587321000");
+        g.getNewsDetail("k10012156541000");
         System.out.println();
     }
 
