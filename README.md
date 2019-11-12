@@ -1,4 +1,7 @@
 # NHK EASY NEWS Backend Server
+### Important
+This server will be refactoring by using Spring Boot instead of Spring MVC
+
 ### Introduction
 
 This is a backend server that return the news list which scrawl from NHK Easy News website. Implement with Spring Rest Framework and deploy on AWS.
