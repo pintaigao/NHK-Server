@@ -39,7 +39,6 @@ public class GetNewsDetail {
         String url = "https://www3.nhk.or.jp/news/easy/" + newsId + "/" + newsId + ".html";
         String strJson = getURLContent(url);
         Document doc = Jsoup.parse(strJson);
-        
         Map<String, String> titleRubyContainer = new LinkedHashMap<>();
         handleContentRuby(doc.body().getElementsByClass("article-main__title").get(0),doc.body().getElementsByClass("article-main__title").get(0).childNodes(),titleRubyContainer);
         title.add(titleRubyContainer);
@@ -52,7 +51,7 @@ public class GetNewsDetail {
         for (int i = 0; i < childNum; i++) {
             Map<String, String> wordRubyContainer = new LinkedHashMap<>();
             handleContentRuby(doc.body().getElementById("js-article-body").children().get(i), doc.body().getElementById("js-article-body").children().get(i).childNodes(), wordRubyContainer);
-            System.out.println(wordRubyContainer);
+//            System.out.println(wordRubyContainer);
             articlelist.add(wordRubyContainer);
         }
 
@@ -91,10 +90,10 @@ public class GetNewsDetail {
 
         /* Get all the items from this Father tag*/
         List<Node> listNode = childlist;
+//        System.out.println(listNode);
 
         /* Only get the list of the item that have rape in a tag */
         Elements firstparaContent = firstpara.children();
-
         for (Node n : listNode) {
             String currnetNodeNameFromNode = n.nodeName();
             Element currentElement = firstparaContent.first();
@@ -131,6 +130,7 @@ public class GetNewsDetail {
             }
 
         }
+        System.out.println();
     }
 
     public static void main(String[] args) {
